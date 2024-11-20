@@ -1,0 +1,21 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-DJcV2ZN1.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/images/annie-spratt-bzuqXTmRBM8-unsplash.jpg": {
+    "file": "assets/annie-spratt-bzuqXTmRBM8-unsplash-C70-0Yhc.jpg",
+    "src": "resources/images/annie-spratt-bzuqXTmRBM8-unsplash.jpg"
+  },
+  "resources/images/logo.svg": {
+    "file": "assets/logo-C6MPFaFN.svg",
+    "src": "resources/images/logo.svg"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-z-Rg4TxU.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}

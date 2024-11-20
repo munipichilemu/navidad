@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+body {
+    background: url("../images/annie-spratt-bzuqXTmRBM8-unsplash.jpg") center center;
+    background-size: cover;
+}
+
+label.fi-fo-field-wrp-label > span {
+    @apply !text-white;
+}
+
+.iti__selected-dial-code {
+    @apply !text-gray-950;
+}
