@@ -46,10 +46,22 @@ class InscritoForm extends Component implements HasForms
                 Forms\Components\TextInput::make('names')
                     ->label('Nombres')
                     ->columnStart(1)
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(fn (Forms\Set $set, ?string $state) => strlen($state) > 3
+                        ? $set('names', \Str::title($state))
+                        : $state
+                    )
+                    ->formatStateUsing(fn (?string $state): string => $state ?? '')
                     ->required(),
 
                 Forms\Components\TextInput::make('lastnames')
                     ->label('Apellidos')
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(fn (Forms\Set $set, ?string $state) => strlen($state) > 3
+                        ? $set('lastnames', \Str::title($state))
+                        : $state
+                    )
+                    ->formatStateUsing(fn (?string $state): string => $state ?? '')
                     ->required(),
 
                 Forms\Components\DatePicker::make('birthday')
