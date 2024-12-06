@@ -56,8 +56,8 @@ class InscritoResource extends Resource
                     ->label('Nombres')
                     ->columnStart(1)
                     ->live(onBlur: true)
-                    ->afterStateUpdated(fn (Forms\Set $set, ?string $state) => strlen($state) > 3
-                        ? $set('names', \Str::title($state))
+                    ->afterStateUpdated(fn (Forms\Set $set, ?string $state) => strlen($state) > 1
+                        ? $set('names', \Str::title(trim($state)))
                         : $state
                     )
                     ->formatStateUsing(fn (?string $state): string => $state ?? '')
@@ -65,8 +65,8 @@ class InscritoResource extends Resource
                 Forms\Components\TextInput::make('lastnames')
                     ->label('Apellidos')
                     ->live(onBlur: true)
-                    ->afterStateUpdated(fn (Forms\Set $set, ?string $state) => strlen($state) > 3
-                        ? $set('lastnames', \Str::title($state))
+                    ->afterStateUpdated(fn (Forms\Set $set, ?string $state) => strlen($state) > 1
+                        ? $set('lastnames', \Str::title(trim($state)))
                         : $state
                     )
                     ->formatStateUsing(fn (?string $state): string => $state ?? '')
