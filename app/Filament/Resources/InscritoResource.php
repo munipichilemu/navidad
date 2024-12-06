@@ -37,7 +37,11 @@ class InscritoResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('rut')
                     ->label('RUT')
-                    ->rules(['rut', 'rut_unique:inscritos,rut_num,rut_vd'])
+                    ->rules(['rut'])
+                    ->rules(
+                        ['rut_unique:inscritos,rut_num,rut_vd'],
+                        fn (string $context): bool => $context === 'create'
+                    )
                     ->live(onBlur: true)
                     ->afterStateUpdated(fn (Set $set, ?string $state) => strlen($state) > 3
                         ? $set('rut', Rut::parse($state)->format())
