@@ -8,6 +8,7 @@ use Filament\Forms;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
+use Filament\Forms\Set;
 use Filament\Notifications\Notification;
 use Filament\Support\Colors\Color;
 use Illuminate\Contracts\View\View;
@@ -35,7 +36,7 @@ class InscritoForm extends Component implements HasForms
                     ->label('RUT')
                     ->rules(['rut', 'rut_unique:inscritos,rut_num,rut_vd'])
                     ->live(onBlur: true)
-                    ->afterStateUpdated(fn (Forms\Set $set, ?string $state) => strlen($state) > 3
+                    ->afterStateUpdated(fn (Set $set, ?string $state) => strlen($state) > 3
                         ? $set('rut', Rut::parse($state)->format())
                         : $state
                     )
@@ -47,7 +48,7 @@ class InscritoForm extends Component implements HasForms
                     ->label('Nombres')
                     ->columnStart(1)
                     ->live(onBlur: true)
-                    ->afterStateUpdated(fn (Forms\Set $set, ?string $state) => strlen($state) > 3
+                    ->afterStateUpdated(fn (Set $set, ?string $state) => strlen($state) > 3
                         ? $set('names', \Str::title($state))
                         : $state
                     )
@@ -57,7 +58,7 @@ class InscritoForm extends Component implements HasForms
                 Forms\Components\TextInput::make('lastnames')
                     ->label('Apellidos')
                     ->live(onBlur: true)
-                    ->afterStateUpdated(fn (Forms\Set $set, ?string $state) => strlen($state) > 3
+                    ->afterStateUpdated(fn (Set $set, ?string $state) => strlen($state) > 3
                         ? $set('lastnames', \Str::title($state))
                         : $state
                     )
