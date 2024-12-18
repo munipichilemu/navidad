@@ -2,6 +2,9 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Resources\InscritoResource\Widgets\AgeStats;
+use App\Filament\Resources\InscritoResource\Widgets\InscritoStats;
+use App\Filament\Resources\SectorResource\Widgets\SectorStats;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -43,8 +46,9 @@ class AdminPanelProvider extends PanelProvider
             )
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+                InscritoStats::class,
+                SectorStats::class,
+                AgeStats::class,
             ])
             ->middleware([
                 EncryptCookies::class,
