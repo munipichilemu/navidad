@@ -177,8 +177,10 @@
       <path value="$PROJECT_DIR$/vendor/flowframe/laravel-trend" />
       <path value="$PROJECT_DIR$/vendor/livewire/volt" />
       <path value="$PROJECT_DIR$/vendor/wire-elements/wire-spy" />
-      <path value="$PROJECT_DIR$/vendor/thecodingmachine/safe" />
       <path value="$PROJECT_DIR$/vendor/owenvoke/blade-fontawesome" />
+      <path value="$PROJECT_DIR$/vendor/staabm/side-effects-detector" />
+      <path value="$PROJECT_DIR$/vendor/spatie/simple-excel" />
+      <path value="$PROJECT_DIR$/vendor/calebporzio/sushi" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
