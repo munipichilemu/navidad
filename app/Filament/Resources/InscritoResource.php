@@ -2,7 +2,6 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Exports\InscritoExporter;
 use App\Filament\Resources\InscritoResource\Pages;
 use App\Models\Inscrito;
 use App\Models\Sector;
