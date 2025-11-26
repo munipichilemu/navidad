@@ -22,7 +22,7 @@ class SectorResource extends Resource
 
     protected static ?string $slug = 'sectores';
 
-    protected static ?string $navigationIcon = 'heroicon-s-map';
+    protected static ?string $navigationIcon = 'fas-map-location-dot';
 
     public static function form(Form $form): Form
     {

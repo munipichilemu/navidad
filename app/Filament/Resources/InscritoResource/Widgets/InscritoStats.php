@@ -42,8 +42,8 @@ class InscritoStats extends BaseWidget
 
         return [
             Stat::make('Inscritos totales', Inscrito::count())
-                ->description("Este mes: {$data->sum('aggregate')} – Por semana: {$trend}")
-                ->descriptionIcon($trend >= 0 ? 'heroicon-m-arrow-trending-up' : 'heroicon-m-arrow-trending-down')
+                ->description("Este mes: {$data->sum('aggregate')} – Por semana: $trend")
+                ->descriptionIcon($trend >= 0 ? 'fas-arrow-trend-up' : 'fas-arrow-trend-down')
                 ->color($color)
                 ->chart(
                     $data

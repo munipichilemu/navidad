@@ -30,7 +30,7 @@ class InscritoResource extends Resource
 {
     protected static ?string $model = Inscrito::class;
 
-    protected static ?string $navigationIcon = 'heroicon-s-gift';
+    protected static ?string $navigationIcon = 'fas-gift';
 
     public static function form(Form $form): Form
     {
