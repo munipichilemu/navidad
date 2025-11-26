@@ -21,6 +21,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\HtmlString;
+use Illuminate\Support\Str;
 use Laragear\Rut\Rut;
 use Ysfkaya\FilamentPhoneInput\Forms\PhoneInput;
 use Ysfkaya\FilamentPhoneInput\PhoneInputNumberType;
@@ -58,7 +59,7 @@ class InscritoResource extends Resource
                     ->columnStart(1)
                     ->live(onBlur: true)
                     ->afterStateUpdated(fn (Forms\Set $set, ?string $state) => strlen($state) > 1
-                        ? $set('names', \Str::title(trim($state)))
+                        ? $set('names', Str::title(trim($state)))
                         : $state
                     )
                     ->formatStateUsing(fn (?string $state): string => $state ?? '')
@@ -67,7 +68,7 @@ class InscritoResource extends Resource
                     ->label('Apellidos')
                     ->live(onBlur: true)
                     ->afterStateUpdated(fn (Forms\Set $set, ?string $state) => strlen($state) > 1
-                        ? $set('lastnames', \Str::title(trim($state)))
+                        ? $set('lastnames', Str::title(trim($state)))
                         : $state
                     )
                     ->formatStateUsing(fn (?string $state): string => $state ?? '')
