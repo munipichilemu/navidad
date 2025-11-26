@@ -252,6 +252,7 @@ class InscritoResource extends Resource
     {
         return [
             'index' => Pages\ManageInscritos::route('/'),
+            'view' => Pages\InscritosView::route('/{record}'),
         ];
     }
 
