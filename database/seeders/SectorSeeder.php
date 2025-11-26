@@ -22,6 +22,7 @@ class SectorSeeder extends Seeder
             ['name' => 'Alto Pucará', 'group' => 'urbano', 'created_at' => now(), 'updated_at' => now()],
             ['name' => 'Arauco', 'group' => 'urbano', 'created_at' => now(), 'updated_at' => now()],
             ['name' => 'Atardecer', 'group' => 'urbano', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'Avenida Cáhuil', 'group' => 'urbano', 'created_at' => now(), 'updated_at' => now()],
             ['name' => 'Bicentenario', 'group' => 'urbano', 'created_at' => now(), 'updated_at' => now()],
             ['name' => 'Bosques del Mar', 'group' => 'urbano', 'created_at' => now(), 'updated_at' => now()],
             ['name' => 'Cuatro Colinas', 'group' => 'urbano', 'created_at' => now(), 'updated_at' => now()],
