@@ -182,16 +182,18 @@
       <path value="$PROJECT_DIR$/vendor/malzariey/filament-daterangepicker-filter" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
       <path value="$PROJECT_DIR$/vendor/bezhansalleh/filament-shield" />
-      <path value="$PROJECT_DIR$/vendor/flowframe/laravel-trend" />
       <path value="$PROJECT_DIR$/vendor/livewire/volt" />
       <path value="$PROJECT_DIR$/vendor/wire-elements/wire-spy" />
       <path value="$PROJECT_DIR$/vendor/owenvoke/blade-fontawesome" />
       <path value="$PROJECT_DIR$/vendor/staabm/side-effects-detector" />
       <path value="$PROJECT_DIR$/vendor/spatie/simple-excel" />
       <path value="$PROJECT_DIR$/vendor/calebporzio/sushi" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php84" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php85" />
+      <path value="$PROJECT_DIR$/vendor/flowframe/laravel-trend" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.3" />
   <component name="PhpStan">
     <PhpStan_settings>
       <phpstan_by_interpreter asDefaultInterpreter="true" interpreter_id="8ffe511e-07ec-4e5f-a725-adf15891358e" timeout="60000" />
