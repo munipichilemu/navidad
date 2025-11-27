@@ -2,10 +2,10 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta name="application-name" content="{{ config('app.name') }}">
+    <meta name="application-name" content="{{ config('app.name') }} {{ config('app.year') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ config('app.name') }}</title>
+    <title>{{ config('app.name') }} {{ config('app.year') }}</title>
 
     <style>
         [x-cloak] { display: none !important; }
@@ -21,8 +21,8 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <a href="/" class="flex items-center text-white">
-                        <img class="h-8" src="{{ Vite::asset('resources/images/logo.svg') }}" alt="{{ config('app.name') }}">
-                        <span class="ml-2 text-xl font-bold">{{ config('app.name') }}</span>
+                        <img class="h-8" src="{{ Vite::asset('resources/images/logo.svg') }}" alt="{{ config('app.name') }} {{ config('app.year') }}">
+                        <span class="ml-2 text-xl font-bold">{{ config('app.name') }} {{ config('app.year') }}</span>
                     </a>
                 </div>
 

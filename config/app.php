@@ -14,6 +14,7 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
+    'year' => env('APP_YEAR', \Illuminate\Support\Carbon::now()->year),
 
     /*
     |--------------------------------------------------------------------------

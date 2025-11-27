@@ -1,9 +1,15 @@
 <?php
 
+use Illuminate\Support\Carbon;
 use Livewire\Volt\Component;
 
 new class extends Component {
-    //
+    public function getNewYear()
+    {
+        $current_year = Carbon::create(year: config('app.year'));
+
+        return $current_year->addYear()->year;
+    }
 }; ?>
 
 <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh] gap-8">
@@ -14,7 +20,7 @@ new class extends Component {
             <h1 class="text-4xl font-bold mb-4">#FelizNavidad</h1>
 
             <p class="text-lg mb-8 max-w-[48ch]">
-                Feliz Navidad y un próspero 2024 les desea la Ilustre Municipalidad de Pichilemu.
+                Feliz Navidad y un próspero {{ $this->getNewYear() }} les desea la Ilustre Municipalidad de Pichilemu.
             </p>
 
             <hr class="border-white/20 my-8">
